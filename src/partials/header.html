@@ -1,0 +1,101 @@
+<header>
+  <div class="container">
+    <div class="header-components">
+      <a href="#" class="logo link-reset">
+        <span class="logo__first-line">
+          Hell
+          <svg width="22" height="30">
+            <use href="././images/symbol-defs.svg#fire-in-guarantee"></use>
+          </svg>
+          EN
+        </span>
+        <span class="logo__second-line"> <span class="text-accent">HELLISH </span>english</span>
+      </a>
+      <nav class="navigation">
+        <ul class="navigation__list ul-reset">
+          <li><a href="#program" class="navigation__link link-reset">Studying program</a></li>
+          <li><a href="#about" class="navigation__link link-reset">about</a></li>
+          <li><a href="#how-we-do" class="navigation__link link-reset">training options</a></li>
+          <li><a href="#contacts" class="navigation__link link-reset">contacts</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="consultation-btn" data-modal-open>consultation by phone</button>
+      <button type="button" class="mobile-menu__btn" data-menu-open>
+        <svg class="menu" width="21" height="12">
+          <use href="././images/symbol-defs.svg#menu"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu" data-menu>
+      <div class="container">
+        <div class="mobile-menu__header">
+          <a href="#" class="logo logo--mobile-menu link-reset" data-link-5-close>
+            <span class="logo__first-line">
+              Hell
+              <svg width="22" height="30">
+                <use href="././images/symbol-defs.svg#fire-in-guarantee"></use>
+              </svg>
+              EN
+            </span>
+            <span class="logo__second-line"> <span class="text-accent">HELLISH </span>english</span>
+          </a>
+          <button type="button" class="mobile-menu__btn--close" data-menu-close>
+            <svg width="16" height="16">
+              <use class="icon-close" href="././images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="mobile-menu__list ul-reset">
+          <li>
+            <a href="#program" class="mobile-menu__item link-reset" data-link-1-close
+              >Studying program</a
+            >
+          </li>
+          <li><a href="#about" class="mobile-menu__item link-reset" data-link-2-close>About</a></li>
+          <li>
+            <a href="#how-we-do" class="mobile-menu__item link-reset" data-link-3-close
+              >Training options</a
+            >
+          </li>
+          <li>
+            <a href="#contacts" class="mobile-menu__item link-reset" data-link-4-close>Contacts</a>
+          </li>
+          <!-- <li><a href="#contacts" class="mobile-menu__item link-reset" data-link-5-close>Contacts</a></li> -->
+          <!-- <li><button type="button" data-menu-close></button></li> -->
+        </ul>
+        <button type="button" class="consultation-btn--mobile" data-modal-open-mobile data-link-6-close>consultation by phone</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="backdrop container is-hidden" data-modal>
+    <div class="window">
+      <p class="window__text">Please, leave your personal data</h3>
+      <button class="window__close-button" data-modal-close></button>
+      <form class="form" name="order__form">
+          <label class="form__field__lable" for="client-name">Name</label>
+            <input class="form__field__input" type="text" pattern="[a-z, A-Z]{2,20}" name="client-name" id="client-name">
+          <label class="form__field__lable" for="phone-number">Phone</label>
+            <input class="form__field__input" type="tel" pattern="[0-9, +]{10,13}" name="phone-number" id="phone-number">
+          <label class="form__field__lable" for="mail">E-mail</label>
+            <input class="form__field__input" type="email"  name="mail" id="mail">
+        <div class="form__comment">
+          <label class="form__comment__lable" for="comment">Comment</label>
+          <textarea class="form__comment__textarea" name="comment" rows="5" id="comment"
+            placeholder="Eneter your comment"></textarea>
+          <img class="text-area-image" src="/images/modal/white_cat.gif" alt="Running cat">
+        </div>
+        <div class="form__checkbox">
+          <label class="form__checkbox__lable">
+            <input class="form__checkbox__standart" type="checkbox" name="agreement" value="agree" />
+            <span class="form__checkbox__custom"></span><span class="checkbox-text">I agree with</span>
+          </label>
+          <a class="form__checkbox__contract-link link-reset" href=""> Contract policy</a>
+        </div>
+        <button class="button-primary button-primary--modal-wind" type="submit">submit</button>
+      </form>
+    </div>
+  </div>
+  <script src="././js/modal.js"></script>
+  <script src="././js/menu.js"></script>
+</header>
