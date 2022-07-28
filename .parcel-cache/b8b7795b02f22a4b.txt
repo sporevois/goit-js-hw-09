@@ -53,7 +53,7 @@
 48C:\Users\P15s\Documents\GitHub\goit-js-hw-09\src133034759800000000 1
 75C:\Users\P15s\Documents\GitHub\goit-js-hw-09\node_modules\nan\nan_private.h133034870153372503 0
 83C:\Users\P15s\Documents\GitHub\goit-js-hw-09\node_modules\lines-and-columns\LICENSE133034870145132595 0
-49C:\Users\P15s\Documents\GitHub\goit-js-hw-09\dist133035007862767839 1
+49C:\Users\P15s\Documents\GitHub\goit-js-hw-09\dist133035007863086475 1
 95C:\Users\P15s\Documents\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\features\css-all.js133034870160824985 0
 94C:\Users\P15s\Documents\GitHub\goit-js-hw-09\node_modules\@parcel\transformer-babel\lib\jsx.js133034870152459410 0
 84C:\Users\P15s\Documents\GitHub\goit-js-hw-09\node_modules\svgo\plugins\reusePaths.js133034870158154932 0
