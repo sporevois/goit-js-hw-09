@@ -18,6 +18,7 @@ minutesEl.style.display = "block"; minutesEl.style.textAlign = "center"; minutes
 secondsEl.style.display = "block"; secondsEl.style.textFlign = "center"; secondsEl.style.fontSize = "45px"; secondsEl.style.paddingRight = "10px";
 
 startBtn.setAttribute("disabled", "true");
+
 const options = {
     enableTime: true,
     time_24hr: true,
@@ -34,6 +35,8 @@ const options = {
     }
 }
 function onTimerSetDate() {
+    startBtn.removeEventListener('click', onTimerSetDate);
+    startBtn.setAttribute("disabled", "true");
     timerId = setInterval(() => {
         const now = new Date();
         const delta = deadLine - now;
@@ -54,19 +57,14 @@ function pad(value) {
 }
 
 function convertMs(ms) {
-    // Number of milliseconds per unit of time
     const second = 1000;
     const minute = second * 60;
     const hour = minute * 60;
     const day = hour * 24;
             
-    // Remaining days
     const days = Math.floor(ms / day);
-    // Remaining hours
     const hours = Math.floor((ms % day) / hour);
-    // Remaining minutes
     const minutes = Math.floor(((ms % day) % hour) / minute);
-    // Remaining seconds
     const seconds = Math.floor((((ms % day) % hour) % minute) / second)
 
     return { days, hours, minutes, seconds };
