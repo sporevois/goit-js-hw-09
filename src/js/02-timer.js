@@ -11,11 +11,10 @@ const minutesEl = document.querySelector("[data-minutes]");
 const secondsEl = document.querySelector("[data-seconds]");
 let deadLine = null;
 // Styles:
-timerRef.style.display = "flex"; 
-daysEl.style.display = "block"; daysEl.style.textAlign = "center"; daysEl.style.fontSize = "45px"; daysEl.style.paddingRight = "10px";
-hoursEl.style.display = "block"; hoursEl.style.textAlign = "center"; hoursEl.style.fontSize = "45px";  hoursEl.style.paddingRight = "10px";
-minutesEl.style.display = "block"; minutesEl.style.textAlign = "center"; minutesEl.style.fontSize = "45px"; minutesEl.style.paddingRight = "10px";
-secondsEl.style.display = "block"; secondsEl.style.textFlign = "center"; secondsEl.style.fontSize = "45px"; secondsEl.style.paddingRight = "10px";
+daysEl.style.cssText = `display:block; text-alogn:center; font-size: 45px; padding-right:15px;`
+hoursEl.style.cssText = `display:block; text-alogn:center; font-size: 45px; padding-right:15px;`
+minutesEl.style.cssText = `display:block; text-alogn:center; font-size: 45px; padding-right:15px;`
+secondsEl.style.cssText = `display:block; text-alogn:center; font-size: 45px; padding-right:15px;`
 
 startBtn.setAttribute("disabled", "true");
 
