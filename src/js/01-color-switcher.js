@@ -1,8 +1,3 @@
-// 1. написать ф-цию которая меняет цвет фона
-// 2. после нажатия кнопки «Start», раз в секунду меняет цвет фона <body>
-// 3. При нажатии на кнопку «Stop», изменение цвета фона должно останавливаться.
-// 4. пока изменение темы запушено, кнопка «Start»должна быть не активна (disabled).
-
 const startBtn = document.querySelector('[data-start]');
 const stopBtn = document.querySelector('[data-stop]');
 const bodyRef = document.querySelector('body');
