@@ -14,7 +14,7 @@ function onSubmitCreatePromise(event) {
   const step = Number(stepEl.value);
   const amount = Number(amountEl.value);
 
-  for (i = 1; i <= amount; i += 1){
+  for (let i = 1; i <= amount; i += 1){
     timeOut += step;
 
     createPromise(i, timeOut)
