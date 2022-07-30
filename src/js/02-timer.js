@@ -4,7 +4,6 @@ import Notiflix from 'notiflix';
 
 const inputRef = document.querySelector('#datetime-picker');
 const startBtn = document.querySelector('[data-start]');
-const timerRef = document.querySelector('.timer')
 const daysEl = document.querySelector("[data-days]");
 const hoursEl = document.querySelector("[data-hours]");
 const minutesEl = document.querySelector("[data-minutes]");
@@ -29,13 +28,14 @@ const options = {
             return;
         }
         deadLine = selectedDates[0]
-        startBtn.addEventListener('click', onTimerSetDate);
+        startBtn.addEventListener('click', onTimerSetsDate);
         startBtn.removeAttribute("disabled");  
     }
 }
-function onTimerSetDate() {
-    startBtn.removeEventListener('click', onTimerSetDate);
+function onTimerSetsDate() {
+    startBtn.removeEventListener('click', onTimerSetsDate);
     startBtn.setAttribute("disabled", "true");
+    
     timerId = setInterval(() => {
         const now = new Date();
         const delta = deadLine - now;
