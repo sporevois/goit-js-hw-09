@@ -9,6 +9,7 @@ const hoursEl = document.querySelector("[data-hours]");
 const minutesEl = document.querySelector("[data-minutes]");
 const secondsEl = document.querySelector("[data-seconds]");
 let deadLine = null;
+let timerId = null;
 // Styles:
 daysEl.style.cssText = `display:block; text-alogn:center; font-size: 45px; padding-right:15px;`
 hoursEl.style.cssText = `display:block; text-alogn:center; font-size: 45px; padding-right:15px;`
@@ -37,7 +38,7 @@ function onTimerSetsDate() {
     startBtn.setAttribute("disabled", "true");
     inputRef.setAttribute("disabled", "true");
     
-    const timerId = setInterval(() => {
+        timerId = setInterval(() => {
         const now = new Date();
         const delta = deadLine - now;
         const { days, hours, minutes, seconds } = convertMs(delta);
