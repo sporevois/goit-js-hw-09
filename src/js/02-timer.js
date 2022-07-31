@@ -35,6 +35,7 @@ const options = {
 function onTimerSetsDate() {
     startBtn.removeEventListener('click', onTimerSetsDate);
     startBtn.setAttribute("disabled", "true");
+    inputRef.setAttribute("disabled", "true");
     
     timerId = setInterval(() => {
         const now = new Date();
@@ -46,11 +47,12 @@ function onTimerSetsDate() {
         secondsEl.textContent = pad(seconds);
         
         if (delta < 1000) {
-            clearInterval(timerId);
-        }
-    }, 1000);      
+        inputRef.removeAttribute("disabled");
+        clearInterval(timerId);
+            return;      
+        }    
+    }, 1000);
 }
-
 function pad(value) {
     return String(value).padStart(2, '0');
 }
@@ -68,5 +70,5 @@ function convertMs(ms) {
 
     return { days, hours, minutes, seconds };
 }
-flatpickr(inputRef, options)
+    flatpickr(inputRef, options);
 
