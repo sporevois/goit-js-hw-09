@@ -37,7 +37,7 @@ function onTimerSetsDate() {
     startBtn.setAttribute("disabled", "true");
     inputRef.setAttribute("disabled", "true");
     
-    timerId = setInterval(() => {
+    const timerId = setInterval(() => {
         const now = new Date();
         const delta = deadLine - now;
         const { days, hours, minutes, seconds } = convertMs(delta);
